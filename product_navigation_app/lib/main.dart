@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/pixel_detail_screen.dart';
+import 'screens/laptop_detail_screen.dart';
 import 'screens/tablet_detail_screen.dart';
 import 'screens/pendrive_detail_screen.dart';
 import 'screens/floppydrive_detail_screen.dart';
@@ -44,6 +45,7 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
+
           //Pixel 1
           GestureDetector(
             onTap: () {
@@ -66,16 +68,11 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   SizedBox(width: 10),
-
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Pixel 1',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
+                      Text('Pixel 1', style: TextStyle(fontWeight: FontWeight.bold)),
                       Text('Google Pixel is the most featureful \nphone ever.'),
                       Text('Price: 800'),
                       buildStars(false),
@@ -87,36 +84,39 @@ class HomePage extends StatelessWidget {
           ),
 
           //Laptop
-          Card(
-            child: Row(
-              children: [
-                Container(
-                  height: 140,
-                  width: 180,
-                  color: Colors.green,
-                  child: Center(
-                    child: Text(
-                      'Laptop',
-                      style: TextStyle(color: Colors.white, fontSize: 30),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LaptopDetailScreen()),
+              );
+            },
+            child: Card(
+              child: Row(
+                children: [
+                  Container(
+                    height: 140,
+                    width: 180,
+                    color: Colors.green,
+                    child: Center(
+                      child: Text(
+                        'Laptop',
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
                     ),
                   ),
-                ),
-
-                SizedBox(width: 10),
-
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Laptop',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text('Laptop is the most productive \ndevelopment tool.'),
-                    Text('Price: 2000'),
-                    buildStars(false),
-                  ],
-                ),
-              ],
+                  SizedBox(width: 10),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Laptop', style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text('Laptop is the most productive \ndevelopment tool.'),
+                      Text('Price: 2000'),
+                      buildStars(false),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
 
@@ -142,19 +142,12 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-
                   SizedBox(width: 10),
-
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Tablet',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'Tablet is the most useful device \never for meeting.',
-                      ),
+                      Text('Tablet', style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text('Tablet is the most useful device \never for meeting.'),
                       Text('Price: 1500'),
                       buildStars(true),
                     ],
@@ -186,16 +179,11 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 SizedBox(width: 10),
-
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Pendrive',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+                    Text('Pendrive', style: TextStyle(fontWeight: FontWeight.bold)),
                     Text('iPhone is the stylist phone ever.'),
                     Text('Price: 100'),
                     buildStars(false),
@@ -228,25 +216,21 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-
-                  SizedBox(width: 10),
-
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Floppy Drive',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text('Floppy Drive is a classic storage \ndevice from the past.'),
-                      Text('Price: 20'),
-                      buildStars(false),
-                    ],
-                  ),
-                ],
-              ),
+                               SizedBox(width: 10),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Floppy Drive', style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text('Storage device before Cds and Flash \ndrives.'),
+                    Text('Price: 50'),
+                    buildStars(false),
+                  ],
+                ),
+              ],
             ),
           ),
+
+          )
         ],
 
       ),
