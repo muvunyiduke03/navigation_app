@@ -9,7 +9,7 @@ class FloppyDriveDetailScreen extends StatelessWidget{
         3,
         (index) => Icon(
           filled ? Icons.star : Icons.star_border,
-          color: Colors.tealAccent,
+          color: Colors.teal,
         ),
       ),
     );
@@ -55,7 +55,7 @@ class FloppyDriveDetailScreen extends StatelessWidget{
           SizedBox(height: 20),
 
           Text(
-            'Price: 800',
+            'Price: 50',
             style: TextStyle(fontSize: 18),
           ),
 

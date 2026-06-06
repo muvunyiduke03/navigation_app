@@ -8,7 +8,7 @@ class LaptopDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Laptop'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.greenAccent,
       ),
       body: Column(
         children: [
