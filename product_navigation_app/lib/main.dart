@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Pixel 1', style: TextStyle(fontWeight: FontWeight.bold)),
-                      Text('Google Pixel is the most featureful \nphone ever.'),
+                      Text('Google Pixel is the most \nfeatureful phone ever.'),
                       Text('Price: 800'),
                       buildStars(false),
                     ],
@@ -221,7 +221,7 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('Floppy Drive', style: TextStyle(fontWeight: FontWeight.bold)),
-                    Text('Storage device before Cds and Flash \ndrives.'),
+                    Text('Storage device before Cds and \nFlash drives.'),
                     Text('Price: 50'),
                     buildStars(false),
                   ],
