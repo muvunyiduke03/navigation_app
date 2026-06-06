@@ -20,14 +20,14 @@ class PendriveDetailScreen extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text('Pendrive'),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.red,
       ),
       body: Column(
         children: [
           Container(
             height: 300,
             width: double.infinity,
-            color: Colors.greenAccent,
+            color: Colors.redAccent,
             child: Center(
               child: Text(
                 'Pendrive 1',
