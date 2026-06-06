@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     height: 140,
-                    width: 180,
+                    width: 170,
                     color: Colors.blueAccent,
                     child: Center(
                       child: Text(
@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Pixel 1', style: TextStyle(fontWeight: FontWeight.bold)),
-                      Text('Google Pixel is the most \nfeatureful phone ever.'),
+                      Text('Google Pixel is the most\nfeatureful phone ever.'),
                       Text('Price: 800'),
                       buildStars(false),
                     ],
@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     height: 140,
-                    width: 180,
+                    width: 170,
                     color: Colors.green,
                     child: Center(
                       child: Text(
@@ -133,7 +133,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     height: 140,
-                    width: 180,
+                    width: 170,
                     color: Colors.yellow,
                     child: Center(
                       child: Text(
@@ -170,7 +170,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     height: 140,
-                    width: 180,
+                    width: 170,
                   color: const Color.fromARGB(255, 153, 47, 21),
                   child: Center(
                     child: Text(
@@ -207,7 +207,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Container(
                     height: 140,
-                    width: 180,
+                    width: 170,
                     color: Colors.teal,
                     child: Center(
                       child: Text(
