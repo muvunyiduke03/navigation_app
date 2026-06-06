@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 import 'screens/pixel_detail_screen.dart';
 import 'screens/tablet_detail_screen.dart';
+import 'screens/pendrive_detail_screen.dart';
+import 'screens/floppydrive_detail_screen.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()));
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }
 }
 
 class HomePage extends StatelessWidget {
@@ -151,12 +165,19 @@ class HomePage extends StatelessWidget {
           ),
 
           //Pendrive
-          Card(
-            child: Row(
-              children: [
-                Container(
-                  height: 140,
-                  width: 180,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PendriveDetailScreen()),
+              );
+            },
+            child: Card(
+              child: Row(
+                children: [
+                  Container(
+                    height: 140,
+                    width: 180,
                   color: const Color.fromARGB(255, 153, 47, 21),
                   child: Center(
                     child: Text(
@@ -183,41 +204,51 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          ),
 
           //Floppy drive
-          Card(
-            child: Row(
-              children: [
-                Container(
-                  height: 140,
-                  width: 180,
-                  color: Colors.teal,
-                  child: Center(
-                    child: Text(
-                      'Floppy drive',
-                      style: TextStyle(color: Colors.white, fontSize: 30),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FloppyDriveDetailScreen()),
+              );
+            },
+            child: Card(
+              child: Row(
+                children: [
+                  Container(
+                    height: 140,
+                    width: 180,
+                    color: Colors.grey,
+                    child: Center(
+                      child: Text(
+                        'Floppy Drive',
+                        style: TextStyle(color: Colors.white, fontSize: 24),
+                      ),
                     ),
                   ),
-                ),
 
-                SizedBox(width: 10),
+                  SizedBox(width: 10),
 
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Floppy Drive',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text('Storage device before Cds and Flash \ndrives.'),
-                    Text('Price: 50'),
-                    buildStars(false),
-                  ],
-                ),
-              ],
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Floppy Drive',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('Floppy Drive is a classic storage \ndevice from the past.'),
+                      Text('Price: 20'),
+                      buildStars(false),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
+
       ),
     );
   }

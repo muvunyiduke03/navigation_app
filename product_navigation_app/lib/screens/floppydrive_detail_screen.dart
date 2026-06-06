@@ -9,7 +9,7 @@ class FloppyDriveDetailScreen extends StatelessWidget{
         3,
         (index) => Icon(
           filled ? Icons.star : Icons.star_border,
-          color: Colors.greenAccent,
+          color: Colors.tealAccent,
         ),
       ),
     );
@@ -20,14 +20,14 @@ class FloppyDriveDetailScreen extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text('Floppy Drive'),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.teal,
       ),
       body: Column(
         children: [
           Container(
             height: 300,
             width: double.infinity,
-            color: Colors.greenAccent,
+            color: Colors.tealAccent,
             child: Center(
               child: Text(
                 'Floppy Drive 1',
@@ -67,7 +67,7 @@ class FloppyDriveDetailScreen extends StatelessWidget{
               3, 
             (index) => const Icon(
               Icons.star_border,
-              color: Colors.green,
+              color: Colors.teal,
               size: 50,
             ),
           ),
