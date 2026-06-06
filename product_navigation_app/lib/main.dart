@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'screens/pixel_detail_screen.dart';
+import 'screens/laptop_detail_screen.dart';
 
-void main(){
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    ),
-  );
+void main() {
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()));
 }
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  
   Widget buildStars(bool filled) {
     return Row(
       children: List.generate(
@@ -35,15 +30,12 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-
           //Pixel 1
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => PixelDetailScreen(),
-                ),
+                MaterialPageRoute(builder: (context) => PixelDetailScreen()),
               );
             },
             child: Card(
@@ -56,10 +48,7 @@ class HomePage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'Pixel 1',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                        ),
+                        style: TextStyle(color: Colors.white, fontSize: 30),
                       ),
                     ),
                   ),
@@ -71,9 +60,7 @@ class HomePage extends StatelessWidget {
                     children: [
                       Text(
                         'Pixel 1',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text('Google Pixel is the most featureful \nphone ever.'),
                       Text('Price: 800'),
@@ -86,39 +73,42 @@ class HomePage extends StatelessWidget {
           ),
 
           //Laptop
-          Card(
-            child: Row(
-              children: [
-                Container(
-                  height: 140,
-                  width: 180,
-                  color: Colors.green,
-                  child: Center(
-                    child: Text(
-                      'Laptop',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LaptopDetailScreen()),
+              );
+            },
+            child: Card(
+              child: Row(
+                children: [
+                  Container(
+                    height: 140,
+                    width: 180,
+                    color: Colors.green,
+                    child: Center(
+                      child: Text(
+                        'Laptop',
+                        style: TextStyle(color: Colors.white, fontSize: 30),
                       ),
                     ),
                   ),
-                ),
-
-                SizedBox(width: 10),
-
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Laptop',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Text('Laptop is the most productive \ndevelopment tool.'),
-                    Text('Price: 2000'),
-                    buildStars(false)
-                  ],
-                ),
-              ],
+                  SizedBox(width: 10),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Laptop',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text('Laptop is the most productive \ndevelopment tool.'),
+                      Text('Price: 2000'),
+                      buildStars(false),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
 
@@ -133,10 +123,7 @@ class HomePage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Tablet',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 30),
                     ),
                   ),
                 ),
@@ -150,9 +137,11 @@ class HomePage extends StatelessWidget {
                       'Tablet',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    Text('Tablet is the most useful device \never for meeting.'),
+                    Text(
+                      'Tablet is the most useful device \never for meeting.',
+                    ),
                     Text('Price: 1500'),
-                    buildStars(true)
+                    buildStars(true),
                   ],
                 ),
               ],
@@ -170,10 +159,7 @@ class HomePage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Pen drive',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 30),
                     ),
                   ),
                 ),
@@ -189,7 +175,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Text('iPhone is the stylist phone ever.'),
                     Text('Price: 100'),
-                    buildStars(false)
+                    buildStars(false),
                   ],
                 ),
               ],
@@ -197,7 +183,6 @@ class HomePage extends StatelessWidget {
           ),
 
           //Floppy drive
-
           Card(
             child: Row(
               children: [
@@ -208,10 +193,7 @@ class HomePage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Floppy drive',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30,
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 30),
                     ),
                   ),
                 ),
@@ -227,7 +209,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Text('Storage device before Cds and Flash \ndrives.'),
                     Text('Price: 50'),
-                    buildStars(false)
+                    buildStars(false),
                   ],
                 ),
               ],
