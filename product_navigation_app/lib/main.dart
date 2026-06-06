@@ -220,7 +220,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     height: 140,
                     width: 180,
-                    color: Colors.grey,
+                    color: Colors.teal,
                     child: Center(
                       child: Text(
                         'Floppy Drive',
