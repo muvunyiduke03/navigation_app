@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TabletDetailScreen extends StatelessWidget{
-  const TabletDetailScreen({super.key});
+class PendriveDetailScreen extends StatelessWidget{
+  const PendriveDetailScreen({super.key});
 
   Widget buildStars(bool filled) {
     return Row(
@@ -9,7 +9,7 @@ class TabletDetailScreen extends StatelessWidget{
         3,
         (index) => Icon(
           filled ? Icons.star : Icons.star_border,
-          color: Colors.yellowAccent,
+          color: Colors.redAccent,
         ),
       ),
     );
@@ -19,18 +19,18 @@ class TabletDetailScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tablet'),
-        backgroundColor: Colors.yellow,
+        title: Text('Pendrive'),
+        backgroundColor: Colors.red,
       ),
       body: Column(
         children: [
           Container(
             height: 300,
             width: double.infinity,
-            color: Colors.yellowAccent,
+            color: Colors.redAccent,
             child: Center(
               child: Text(
-                'Tablet 1',
+                'Pendrive 1',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 50,
@@ -41,7 +41,7 @@ class TabletDetailScreen extends StatelessWidget{
 
           SizedBox(height: 30),
           Text(
-            'Tablet 1',
+            'Pendrive 1',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -50,12 +50,12 @@ class TabletDetailScreen extends StatelessWidget{
 
           SizedBox(height: 20),
 
-          Text('Tablet is the most useful device \n ever for meeting.'),
+          Text('Pendrive is the most useful device \n ever for data storage.'),
 
           SizedBox(height: 20),
 
           Text(
-            'Price: 1500',
+            'Price: 800',
             style: TextStyle(fontSize: 18),
           ),
 
